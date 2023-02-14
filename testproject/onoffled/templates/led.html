@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LED Control</title>
+  </head>
+  <body>
+    <h1>LED Control</h1>
+    <form action="{% url 'led_on' %}" method="post">
+      {% csrf_token %}
+      <button type="submit">LED On</button>
+    </form>
+    <form action="{% url 'led_off' %}" method="post">
+      {% csrf_token %}
+      <button type="submit">LED Off</button>
+    </form>
+  </body>
+</html>
